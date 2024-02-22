@@ -19,6 +19,8 @@ namespace InternetCafeSystem
         InternetUserBLL bll = new InternetUserBLL();
         UserInfo ui = new UserInfo();
         string _vnum;
+        DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
+        DataGridViewButtonColumn btn2 = new DataGridViewButtonColumn();
         public VipMain(string vnum)
         {
             InitializeComponent();
@@ -46,14 +48,14 @@ namespace InternetCafeSystem
             dgv_choose.AllowUserToAddRows = false;
             dgv_choose.DataSource = ds.Tables[0].DefaultView;
             //在datagridview中添加button按钮
-            DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
+            //DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
             btn.Name = "go";
             btn.HeaderText = "操作";
             btn.DefaultCellStyle.NullValue = "上机";
             dgv_choose.Columns.Add(btn);
 
             //在datagridview中添加button按钮
-            DataGridViewButtonColumn btn2 = new DataGridViewButtonColumn();
+            //DataGridViewButtonColumn btn2 = new DataGridViewButtonColumn();
             btn2.Name = "down";
             btn2.HeaderText = "操作";
             btn2.DefaultCellStyle.NullValue = "下机";
@@ -85,6 +87,8 @@ namespace InternetCafeSystem
                     bll.UpdateComStateGo(pcname);//修改电脑状态为上机
                     DataSet dst = bll.FindComputerState();
                     dgv_choose.DataSource = dst.Tables[0].DefaultView;
+                    btn.Visible = false;
+                    
                 }
                 else
                 {
@@ -128,6 +132,7 @@ namespace InternetCafeSystem
                             DataSet ds4 = bll.SelectLonelyVip(_vnum);
                             int money2 = Convert.ToInt32(ds4.Tables[0].Rows[0][0].ToString());
                             MessageBox.Show("下机成功！您此次的上机时长为：" + gametime + " 分钟，" + "消费为 " + 5 + " 元，" + "当前剩余 " + money2 + " 元", "提示");
+                            btn.Visible = true;
                         }
 
 
