@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddAdministrator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAdministrator.Designer.cs">
+      <DependentUpon>AddAdministrator.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddComputer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,9 @@
     <Compile Include="ZhuCe.Designer.cs">
       <DependentUpon>ZhuCe.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddAdministrator.resx">
+      <DependentUpon>AddAdministrator.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddComputer.resx">
       <DependentUpon>AddComputer.cs</DependentUpon>
     </EmbeddedResource>
@@ -215,6 +224,7 @@
     <Content Include="img\注册.ico" />
     <Content Include="img\添加会员.png" />
     <Content Include="img\添加电脑.png" />
+    <Content Include="img\添加管理员.png" />
     <Content Include="img\网吧图标.ico" />
     <Content Include="img\计费规则.png" />
     <Content Include="img\记录 %281%29.png" />

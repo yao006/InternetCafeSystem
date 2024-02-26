@@ -76,7 +76,7 @@
             // 
             // btn_denglu
             // 
-            this.btn_denglu.Location = new System.Drawing.Point(207, 286);
+            this.btn_denglu.Location = new System.Drawing.Point(198, 286);
             this.btn_denglu.Name = "btn_denglu";
             this.btn_denglu.Size = new System.Drawing.Size(112, 45);
             this.btn_denglu.TabIndex = 2;
@@ -97,7 +97,7 @@
             // 
             // btn_vipdenglu
             // 
-            this.btn_vipdenglu.Location = new System.Drawing.Point(452, 286);
+            this.btn_vipdenglu.Location = new System.Drawing.Point(446, 286);
             this.btn_vipdenglu.Name = "btn_vipdenglu";
             this.btn_vipdenglu.Size = new System.Drawing.Size(113, 45);
             this.btn_vipdenglu.TabIndex = 4;

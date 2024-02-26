@@ -62,5 +62,11 @@ namespace InternetCafeSystem
             Record r = new Record();
             r.ShowDialog();
         }
+
+        private void toolStripButton8_Click(object sender, EventArgs e)
+        {
+            AddAdministrator ac = new AddAdministrator();
+            ac.ShowDialog();
+        }
     }
 }
